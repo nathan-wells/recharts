@@ -434,6 +434,8 @@ class Brush extends PureComponent {
     if (!data || !data.length || !isNumber(x) || !isNumber(y) || !isNumber(width) ||
       !isNumber(height) || width <= 0 || height <= 0) { return null; }
 
+    console.log(this.props);
+
     const layerClass = classNames('recharts-brush', className);
     const isPanoramic = React.Children.count(children) === 1;
     const style = generatePrefixStyle('userSelect', 'none');
